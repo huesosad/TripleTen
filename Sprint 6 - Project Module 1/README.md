@@ -1,8 +1,37 @@
-### Descripción del proyecto
-Trabajas para la tienda online Ice que vende videojuegos por todo el mundo. Las reseñas de usuarios y expertos, los géneros, las plataformas (por ejemplo, Xbox o PlayStation) y los datos históricos sobre las ventas de juegos están disponibles en fuentes abiertas. Tienes que identificar patrones que determinen si un juego tiene éxito o no. Esto te permitirá detectar proyectos prometedores y planificar campañas publicitarias.
+# Video games analysis for marketing purposes | Project 6 - Tripleten
+This project was part of my Data Scientist bootcamp at Tripleten
 
-Delante de ti hay datos que se remontan a 2016. Imaginemos que es diciembre de 2016 y estás planeando una campaña para 2017.
+## Introduction
+This project focuses on analyzing historical video game sales data from the fictional online store "Ice" to predict trends that could determine the success of an advertising campaign for the next year. Our dataset comprises user and expert reviews, genres, platforms (e.g., Xbox or PlayStation), and sales data from various regions, up to December 2016.
 
-Lo importante es adquirir experiencia de trabajo con datos. Realmente no importa si estás pronosticando las ventas de 2017 en función de los datos de 2016 o las ventas de 2027 en función de los datos de 2026.
+## Tasks
+### 1. Data preparation
+- The data was imported and loaded into a DataFrame. Several missing values were treated accordingly.
+- A new column called 'total_sales' was added to sum up all the sales from the different regions for each video game.
 
-El dataset contiene una columna "rating" que almacena la clasificación ESRB de cada juego. El Entertainment Software Rating Board (la Junta de clasificación de software de entretenimiento) evalúa el contenido de un juego y asigna una clasificación de edad como Adolescente o Adulto.
+### 2. Data Analysis
+Aspects of the data were examined:
+
+- Distribution of games released per year
+- Distribution of games released per platform
+- Total sales per year for each platform
+- User rating correlation with total sales
+- Critic rating correlation with total sales
+- Analyzed the popularity of platforms in each region
+
+Visual representations were created for the above analyses, including bar charts, scatter plots, boxplots, and pie charts.
+
+### 3. Hypothesis testing
+Two hypotheses were tested:
+
+1. Average user ratings of the Xbox One and PC platforms are the same.
+   - Rejected the null hypothesis for the first, suggesting the average user ratings for Xbox One and PC are different.
+2. Average user ratings for the Action and Sports genres are different.
+   - Failed to reject the null hypothesis for the second, suggesting no significant difference in average user ratings between Action and Sports genres.
+
+### 4. Conclusion
+After analyzing all the data, we are now ready to plan a targeted marketing campaign. If our objective is to allocate a marketing budget to drive additional sales, we could assign it to the PS4 platform, as it is the console showing consistent growth and has the highest sales potential in the NA, EU, and Other regions. We could also increase advertising for Action games with an M rating, as they represent a strong opportunity for additional revenue.
+
+On the other hand, for the JP region, we may consider a different campaign strategy, since the 3DS platform performs best in this market. Action games also show strong potential in this region, so increasing advertising for titles within this genre could help boost sales.
+
+These represent the most relevant conclusions we can draw from the current dataset. However, if we are asked about a specific game, we will now be able to assess its sales success probability and provide a recommendation backed by data.
